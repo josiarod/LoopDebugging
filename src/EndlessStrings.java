@@ -6,15 +6,20 @@ public class EndlessStrings {
 
         Scanner keyboard = new Scanner(System.in);
 
-        String userInput = "";
+        String userInput = "something";
 
-       // userInput = keyboard.next();
 
-      do {
-            System.out.println(userInput);
-            userInput = keyboard.next();
 
-        } while (userInput != "");
+        while (userInput.equalsIgnoreCase("something")) {
+           //Get user input
+            System.out.println("Please type something: ");
+            String something = keyboard.nextLine();
+            // If input is empty break
+            if(something.equals("")){
+                break;
+            }
+            System.out.println(something);
+        }
 
     }
 }
